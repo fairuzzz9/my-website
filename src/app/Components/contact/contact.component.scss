@@ -1,0 +1,68 @@
+%btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 3px;
+
+    &:hover{
+        transform: scale(.98);
+    }
+}
+
+// $background-color: black;
+// $text-color: rgb(185, 184, 184);
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    // background-color: $background-color;
+    // color: $text-color;
+
+    .left {
+        width: 50%;
+        margin-right: 10px;
+    }
+    .right{
+        width: 50%;
+        margin-left: 10px;
+
+        p {
+            text-indent: 50px;
+            line-height: 1.5;
+            word-spacing: 10px;
+            font-weight: 500;
+        }
+    }
+}
+
+.user-form {
+    display: flex;
+    border: 2px solid black;
+    line-height: 2;
+
+
+    div {
+        margin: 10px;
+    }
+}
+.mobile-number{
+    margin: 10px;
+    border: 2px solid black;
+    line-height: 2;
+
+    padding: 10px;
+}
+
+.message {
+    margin:10px;
+    border: 2px solid black;
+    line-height: 2;
+
+    padding: 10px;
+}
+
+button {
+    margin-left: 250px;
+    @extend %btn;
+    
+}

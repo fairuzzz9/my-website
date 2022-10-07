@@ -1,0 +1,39 @@
+<h1>Table using JSON server API</h1>
+<hr>
+
+<div class="form-area">
+    <h3>Create</h3>
+    <form (ngSubmit)="onDataCreate()" #productsForm="ngForm">
+        <label>name</label>
+        <input type="text" name="name" ngModel [(ngModel)]="formFields.field1">
+
+        <label>mobile</label>
+        <input type="text" name="mobile" ngModel [(ngModel)]="formFields.field2">
+
+        <label>email</label>
+        <input type="text" name="email" ngModel [(ngModel)]="formFields.field3">
+
+        <input type="submit" value="{{editMode ? 'Update Data' : 'Add Data'}}">
+    </form>
+</div>
+
+<div class="display-area">
+    <h3>All Data</h3>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+        </tr>
+        <tr *ngFor="let data of allData; index as i">
+            <td>{{i+1}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.mobile}}</td>
+            <td><button class="btn-delete" (click)="onDeleteData(data.id)">Delete</button></td>
+            <td><button class="btn-edit" (click)="onEditClicked(data.id)">Edit</button></td>
+        </tr>
+    </table> <hr>
+    <input type="submit" value="Fetch" (click)="onDataFetch()">
+</div>

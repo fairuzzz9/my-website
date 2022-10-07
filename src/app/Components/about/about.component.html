@@ -1,0 +1,13 @@
+<div class="container"> 
+<p>Fetching Data From Free API!</p>
+
+{{myData | json}}
+
+<ul>
+    <li *ngFor="let item of myData$ | async">
+        <p>Id: {{item.id}}</p> 
+        <p>Title: {{item.title}}</p>
+        <p>Description: {{item.body}}</p>
+    </li>
+</ul>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <form #frm="ngForm" (ngSubmit)="updateInfo(frm)">
+        <div class="">
+            <input type="text" name="location" value="" ngModel>
+            <button type="submit" name="button">Add Info</button>
+        </div>
+    </form>
+
+    <div class="button">
+        <button type="button" name="button" (click)="getInfo1()">User 1</button>
+        <ul>
+            <li *ngFor="let info of infoService1">{{info}}</li>
+        </ul>
+        <button type="button" name="button" (click)="getInfo2()">User 2</button>
+        <ul>
+            <li *ngFor="let info of infoService2">{{info}}</li>
+        </ul>
+        <button type="button" name="button" (click)="getInfo3()">User 3</button>
+        <ul>
+            <li *ngFor="let info of infoService3">{{info}}</li>
+        </ul>
+    </div>
+</div>

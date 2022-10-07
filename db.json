@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "name": "Kane",
+      "mobile": "0444",
+      "email": "kane@gmail.com",
+      "id": 5
+    },
+    {
+      "field1": "",
+      "field2": "",
+      "field3": "",
+      "id": 6
+    },
+    {
+      "field1": "Fairuz",
+      "field2": "0444",
+      "field3": "github@gmail.com",
+      "id": 7
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
